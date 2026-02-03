@@ -14,6 +14,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "DoubleMouseClick",
+                    "type": "Button",
+                    "id": "eb290d5d-f448-45ee-af15-028555bcdb4a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "MultiTap(tapTime=0.6)",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -25,6 +34,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "MouseClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "89afb82f-2d5d-4661-88e9-c8bef1edc2c8",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DoubleMouseClick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

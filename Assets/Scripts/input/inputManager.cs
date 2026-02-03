@@ -100,6 +100,15 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DoubleMouseClick"",
+                    ""type"": ""Button"",
+                    ""id"": ""eb290d5d-f448-45ee-af15-028555bcdb4a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""MultiTap(tapTime=0.6)"",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -113,6 +122,17 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
                     ""action"": ""MouseClick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""89afb82f-2d5d-4661-88e9-c8bef1edc2c8"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DoubleMouseClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -122,6 +142,7 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
         // Camera
         m_Camera = asset.FindActionMap("Camera", throwIfNotFound: true);
         m_Camera_MouseClick = m_Camera.FindAction("MouseClick", throwIfNotFound: true);
+        m_Camera_DoubleMouseClick = m_Camera.FindAction("DoubleMouseClick", throwIfNotFound: true);
     }
 
     ~@InputManager()
@@ -203,6 +224,7 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Camera;
     private List<ICameraActions> m_CameraActionsCallbackInterfaces = new List<ICameraActions>();
     private readonly InputAction m_Camera_MouseClick;
+    private readonly InputAction m_Camera_DoubleMouseClick;
     /// <summary>
     /// Provides access to input actions defined in input action map "Camera".
     /// </summary>
@@ -218,6 +240,10 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Camera/MouseClick".
         /// </summary>
         public InputAction @MouseClick => m_Wrapper.m_Camera_MouseClick;
+        /// <summary>
+        /// Provides access to the underlying input action "Camera/DoubleMouseClick".
+        /// </summary>
+        public InputAction @DoubleMouseClick => m_Wrapper.m_Camera_DoubleMouseClick;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -247,6 +273,9 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
             @MouseClick.started += instance.OnMouseClick;
             @MouseClick.performed += instance.OnMouseClick;
             @MouseClick.canceled += instance.OnMouseClick;
+            @DoubleMouseClick.started += instance.OnDoubleMouseClick;
+            @DoubleMouseClick.performed += instance.OnDoubleMouseClick;
+            @DoubleMouseClick.canceled += instance.OnDoubleMouseClick;
         }
 
         /// <summary>
@@ -261,6 +290,9 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
             @MouseClick.started -= instance.OnMouseClick;
             @MouseClick.performed -= instance.OnMouseClick;
             @MouseClick.canceled -= instance.OnMouseClick;
+            @DoubleMouseClick.started -= instance.OnDoubleMouseClick;
+            @DoubleMouseClick.performed -= instance.OnDoubleMouseClick;
+            @DoubleMouseClick.canceled -= instance.OnDoubleMouseClick;
         }
 
         /// <summary>
@@ -308,5 +340,12 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMouseClick(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "DoubleMouseClick" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnDoubleMouseClick(InputAction.CallbackContext context);
     }
 }
