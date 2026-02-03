@@ -8,6 +8,7 @@ public class ViewNavigation : MonoBehaviour
 
     public void MoveCamera()
     {
+        // Sets camera position
         Camera.transform.position = CameraPosition.position;
     }
 }

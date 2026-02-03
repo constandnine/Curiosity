@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class OnClickThreeD : MonoBehaviour
 {
+    [Header("")]
     public UnityEvent onClick;
     public UnityEvent onDoubleClick;
 
@@ -12,16 +13,21 @@ public class OnClickThreeD : MonoBehaviour
 
     private InputManager inputManager;
 
+    [Header("Click Waiting")]
+
     [SerializeField] private float waitForClickTime = 0.3f;
     private bool waitingForSecondClick;
+
     private void Awake()
     {
+        //Sets variables.
         mainCamera = Camera.main;
         inputManager = new InputManager();
     }
 
     private void OnEnable()
     {
+        // Subscribes events on enable.
         inputManager.Enable();
         inputManager.Camera.MouseClick.performed += SingleClickDetected;
         inputManager.Camera.DoubleMouseClick.performed += DoubleClickDetected;
@@ -29,12 +35,13 @@ public class OnClickThreeD : MonoBehaviour
 
     private void OnDisable()
     {
+        //Unsubscribes events on disable.
         inputManager.Camera.MouseClick.performed -= SingleClickDetected;
         inputManager.Camera.DoubleMouseClick.performed -= DoubleClickDetected;
         inputManager.Disable();
     }
 
-    private void CheckClick(UnityEvent thisEvent)
+    private void ExecuteClick(UnityEvent thisEvent)
     {
         // Shoots the Raycast from the mouse itself and than adds a RaycastHit to it so it can check
         Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
@@ -51,26 +58,32 @@ public class OnClickThreeD : MonoBehaviour
 
     private void SingleClickDetected(InputAction.CallbackContext context)
     {
+        // starts a waiting process to check if there is no double click.
         if (!waitingForSecondClick) StartCoroutine(WaitForSecondClick());
-
     }
 
     private void DoubleClickDetected(InputAction.CallbackContext context)
     {
+        // Sets the waiter to false and then executes the ExecuteClick function with the right event.
         waitingForSecondClick = false;
-        CheckClick(onDoubleClick);
+        ExecuteClick(onDoubleClick);
         Debug.Log("Double Click");
     }
 
     private IEnumerator WaitForSecondClick()
     {
+        // Sets the waiter to true before the timer.
         waitingForSecondClick = true;
+        // Timer to check if a second click happenes.
         yield return new WaitForSeconds(waitForClickTime);
 
+        //If second click did happen it set the waiter to false witch means we need to stop running the code.
+        // How ever if this didn't happen we execute the ExecuteClick function with the right event.
         if (!waitingForSecondClick) yield break;
-        CheckClick(onClick);
+        ExecuteClick(onClick);
         Debug.Log("SingleClick");
 
+        // Reset the waiter to false
         waitingForSecondClick = false;
     }
 }
