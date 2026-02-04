@@ -24,15 +24,17 @@ public class SmoothCameraSwitch : MonoBehaviour
 
     public void SmoothCameraRotation(Transform target)
     {
+        StopCoroutine(SmoothMove(null));
         StartCoroutine(SmoothMove(target));
         Debug.Log($"moving camera to {target}", this);
     }
 
     private IEnumerator SmoothMove(Transform target)
     {
-        while (Vector3.Distance(mainCamera.transform.position, target.position) > 0.5f)
+        while (Vector3.Distance(transform.position, target.position) > 0.0005f)
         {
-            transform.position = Vector3.Lerp(mainCamera.transform.position, target.position, Time.deltaTime * speed);
+            transform.position = Vector3.Lerp(transform.position, target.position, Time.deltaTime * speed);
+            transform.LookAt(target.position);
             yield return null;
             Debug.Log("moving", this);
         }
