@@ -7,22 +7,17 @@ public class OrbitVisualizer : MonoBehaviour
     public int segments;
     public float orbitSize;
     public float yOffset;
-
-    private void Start()
+    public GameObject center;
+    private void Awake()
     {
         //Get linerenderer
         lineRenderer = GetComponent<LineRenderer>();
 
         //set orbit size to the distance of the sun
-        orbitSize = transform.position.z * 1;
+        orbitSize = transform.localPosition.z * 1;
     }
 
-    private void Update()
-    {
-        SetVisualOrbit();
-    }
-
-    void SetVisualOrbit()
+    public void SetVisualOrbit()
     {
         //create a array that will contain all points that will make up the circle
         Vector3[] points = new Vector3[segments + 1];
@@ -34,7 +29,7 @@ public class OrbitVisualizer : MonoBehaviour
             float x = Mathf.Cos(angle) * orbitSize;
             float z = Mathf.Sin(angle) * orbitSize;
 
-            points[i] = new Vector3(x, -yOffset, z);
+            points[i] = new Vector3(center.transform.position.x + x, -yOffset, center.transform.position.z + z);
         }
         points[segments] = points[0];
 
