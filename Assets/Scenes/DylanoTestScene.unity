@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 166069897}
   - component: {fileID: 166069896}
   - component: {fileID: 166069899}
+  - component: {fileID: 166069900}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -358,6 +359,20 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &166069900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166069895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2908f3ee0ba72a42827b672e1909e1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SmoothCameraSwitch
+  speed: 1
+  mainCamera: {fileID: 166069897}
 --- !u!1 &239362201
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,7 +788,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd2280351c621e947b3977b4bf0bb04d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ViewNavigation
-  Camera: {fileID: 166069897}
   CameraPosition: {fileID: 676563661}
 --- !u!4 &676563661
 Transform:
@@ -819,7 +833,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd2280351c621e947b3977b4bf0bb04d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ViewNavigation
-  Camera: {fileID: 166069897}
   CameraPosition: {fileID: 1204992043}
 --- !u!4 &1204992043
 Transform:
@@ -875,7 +888,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd2280351c621e947b3977b4bf0bb04d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ViewNavigation
-  Camera: {fileID: 166069897}
   CameraPosition: {fileID: 1664588531}
 --- !u!4 &1664588531
 Transform:
@@ -1183,6 +1195,10 @@ PrefabInstance:
     - target: {fileID: 614816397652798416, guid: 4c958f8fc6a9d424f8ef1e609ed2ce5c, type: 3}
       propertyPath: m_Name
       value: PlanetInfoCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 614816397652798416, guid: 4c958f8fc6a9d424f8ef1e609ed2ce5c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6121184367632650533, guid: 4c958f8fc6a9d424f8ef1e609ed2ce5c, type: 3}
       propertyPath: m_Camera
