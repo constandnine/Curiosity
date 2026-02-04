@@ -12,7 +12,7 @@ public class SmoothCameraSwitch : MonoBehaviour
     {
         if (instance == null)
         {
-            instance = GetComponent<SmoothCameraSwitch>();
+            instance = this;
             DontDestroyOnLoad(gameObject);
         }
 
