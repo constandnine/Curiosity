@@ -6,6 +6,8 @@ public class CameraMovement : MonoBehaviour
 {
     private InputManager inputManager;
 
+    [SerializeField] private Camera mainCamera;
+
     [Header("Rotation")]
 
     [SerializeField] private float deadZone;
@@ -17,9 +19,13 @@ public class CameraMovement : MonoBehaviour
 
     [Header("Zooming")]
 
-    [SerializeField] private Camera mainCamera;
-
     [SerializeField] private float zoomSpeed;
+
+    [Header("Panning")]
+
+    [SerializeField] private float panningSpeed;
+
+    private bool panning;
 
     private void Awake()
     {
@@ -32,12 +38,18 @@ public class CameraMovement : MonoBehaviour
 
         inputManager.Camera.RightMouseButton.performed += context => rotating = true;
         inputManager.Camera.RightMouseButton.canceled += context => rotating = false;
+
+        inputManager.Camera.MidleMouseButton.performed += context => panning = true;
+        inputManager.Camera.MidleMouseButton.canceled += context => panning = false;
     }
 
     private void OnDisable()
     {
         inputManager.Camera.RightMouseButton.performed -= context => rotating = true;
         inputManager.Camera.RightMouseButton.canceled -= context => rotating = false;
+
+        inputManager.Camera.MidleMouseButton.performed += context => panning = true;
+        inputManager.Camera.MidleMouseButton.canceled += context => panning = false;
 
 
         inputManager.Disable();
@@ -47,6 +59,7 @@ public class CameraMovement : MonoBehaviour
     {
         RotateCamera();
         CameraZoom();
+        CameraPanning();
     }
 
     private void RotateCamera()
@@ -81,6 +94,19 @@ public class CameraMovement : MonoBehaviour
 
     public void CameraPanning()
     {
+        if (!panning) return;
 
+        // Read horizontal mouse movement
+        Vector2 delta = inputManager.Camera.MouseDrag.ReadValue<Vector2>();
+        int direction = 0;
+
+        if (delta.x > deadZone) direction = 1;
+        else if (delta.x < -deadZone) direction = -1;
+
+        if (direction != 0)
+        {
+            // Rotate around the target horizontally
+            transform.RotateAround(transform.position, Vector3.up, direction * rotationSpeed * Time.deltaTime);
+        }
     }
 }
