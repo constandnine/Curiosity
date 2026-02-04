@@ -109,6 +109,42 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""MultiTap(tapTime=0.6)"",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MidleMouseButton"",
+                    ""type"": ""Button"",
+                    ""id"": ""63e5b395-6487-4043-9594-87457cdb4c19"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MidleMouseScroll"",
+                    ""type"": ""Value"",
+                    ""id"": ""1e00c11f-0157-4093-8f24-a8eb5b689e12"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""RightMouseButton"",
+                    ""type"": ""Button"",
+                    ""id"": ""236beb86-b340-4b0a-95d3-17da7a067b74"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Hold"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MouseDrag"",
+                    ""type"": ""Value"",
+                    ""id"": ""7bc903da-8ec1-4461-9b03-385fac45dbed"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -133,6 +169,50 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
                     ""action"": ""DoubleMouseClick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5ad14cd7-6a78-49fe-8075-d04f47ec4fae"",
+                    ""path"": ""<Mouse>/middleButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MidleMouseButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cc59372f-3506-444f-b80e-11c7736fe49a"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RightMouseButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""98b0b9b7-6371-4f06-a672-6df61a8f27de"",
+                    ""path"": ""<Mouse>/scroll"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MidleMouseScroll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""84052c01-c100-4d9d-bc03-b6c2ed71dbaa"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseDrag"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -143,6 +223,10 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
         m_Camera = asset.FindActionMap("Camera", throwIfNotFound: true);
         m_Camera_MouseClick = m_Camera.FindAction("MouseClick", throwIfNotFound: true);
         m_Camera_DoubleMouseClick = m_Camera.FindAction("DoubleMouseClick", throwIfNotFound: true);
+        m_Camera_MidleMouseButton = m_Camera.FindAction("MidleMouseButton", throwIfNotFound: true);
+        m_Camera_MidleMouseScroll = m_Camera.FindAction("MidleMouseScroll", throwIfNotFound: true);
+        m_Camera_RightMouseButton = m_Camera.FindAction("RightMouseButton", throwIfNotFound: true);
+        m_Camera_MouseDrag = m_Camera.FindAction("MouseDrag", throwIfNotFound: true);
     }
 
     ~@InputManager()
@@ -225,6 +309,10 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
     private List<ICameraActions> m_CameraActionsCallbackInterfaces = new List<ICameraActions>();
     private readonly InputAction m_Camera_MouseClick;
     private readonly InputAction m_Camera_DoubleMouseClick;
+    private readonly InputAction m_Camera_MidleMouseButton;
+    private readonly InputAction m_Camera_MidleMouseScroll;
+    private readonly InputAction m_Camera_RightMouseButton;
+    private readonly InputAction m_Camera_MouseDrag;
     /// <summary>
     /// Provides access to input actions defined in input action map "Camera".
     /// </summary>
@@ -244,6 +332,22 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Camera/DoubleMouseClick".
         /// </summary>
         public InputAction @DoubleMouseClick => m_Wrapper.m_Camera_DoubleMouseClick;
+        /// <summary>
+        /// Provides access to the underlying input action "Camera/MidleMouseButton".
+        /// </summary>
+        public InputAction @MidleMouseButton => m_Wrapper.m_Camera_MidleMouseButton;
+        /// <summary>
+        /// Provides access to the underlying input action "Camera/MidleMouseScroll".
+        /// </summary>
+        public InputAction @MidleMouseScroll => m_Wrapper.m_Camera_MidleMouseScroll;
+        /// <summary>
+        /// Provides access to the underlying input action "Camera/RightMouseButton".
+        /// </summary>
+        public InputAction @RightMouseButton => m_Wrapper.m_Camera_RightMouseButton;
+        /// <summary>
+        /// Provides access to the underlying input action "Camera/MouseDrag".
+        /// </summary>
+        public InputAction @MouseDrag => m_Wrapper.m_Camera_MouseDrag;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -276,6 +380,18 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
             @DoubleMouseClick.started += instance.OnDoubleMouseClick;
             @DoubleMouseClick.performed += instance.OnDoubleMouseClick;
             @DoubleMouseClick.canceled += instance.OnDoubleMouseClick;
+            @MidleMouseButton.started += instance.OnMidleMouseButton;
+            @MidleMouseButton.performed += instance.OnMidleMouseButton;
+            @MidleMouseButton.canceled += instance.OnMidleMouseButton;
+            @MidleMouseScroll.started += instance.OnMidleMouseScroll;
+            @MidleMouseScroll.performed += instance.OnMidleMouseScroll;
+            @MidleMouseScroll.canceled += instance.OnMidleMouseScroll;
+            @RightMouseButton.started += instance.OnRightMouseButton;
+            @RightMouseButton.performed += instance.OnRightMouseButton;
+            @RightMouseButton.canceled += instance.OnRightMouseButton;
+            @MouseDrag.started += instance.OnMouseDrag;
+            @MouseDrag.performed += instance.OnMouseDrag;
+            @MouseDrag.canceled += instance.OnMouseDrag;
         }
 
         /// <summary>
@@ -293,6 +409,18 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
             @DoubleMouseClick.started -= instance.OnDoubleMouseClick;
             @DoubleMouseClick.performed -= instance.OnDoubleMouseClick;
             @DoubleMouseClick.canceled -= instance.OnDoubleMouseClick;
+            @MidleMouseButton.started -= instance.OnMidleMouseButton;
+            @MidleMouseButton.performed -= instance.OnMidleMouseButton;
+            @MidleMouseButton.canceled -= instance.OnMidleMouseButton;
+            @MidleMouseScroll.started -= instance.OnMidleMouseScroll;
+            @MidleMouseScroll.performed -= instance.OnMidleMouseScroll;
+            @MidleMouseScroll.canceled -= instance.OnMidleMouseScroll;
+            @RightMouseButton.started -= instance.OnRightMouseButton;
+            @RightMouseButton.performed -= instance.OnRightMouseButton;
+            @RightMouseButton.canceled -= instance.OnRightMouseButton;
+            @MouseDrag.started -= instance.OnMouseDrag;
+            @MouseDrag.performed -= instance.OnMouseDrag;
+            @MouseDrag.canceled -= instance.OnMouseDrag;
         }
 
         /// <summary>
@@ -347,5 +475,33 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnDoubleMouseClick(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "MidleMouseButton" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMidleMouseButton(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "MidleMouseScroll" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMidleMouseScroll(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "RightMouseButton" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnRightMouseButton(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "MouseDrag" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMouseDrag(InputAction.CallbackContext context);
     }
 }

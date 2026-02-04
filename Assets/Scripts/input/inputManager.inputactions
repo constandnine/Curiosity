@@ -23,6 +23,42 @@
                     "processors": "",
                     "interactions": "MultiTap(tapTime=0.6)",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "MidleMouseButton",
+                    "type": "Button",
+                    "id": "63e5b395-6487-4043-9594-87457cdb4c19",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MidleMouseScroll",
+                    "type": "Value",
+                    "id": "1e00c11f-0157-4093-8f24-a8eb5b689e12",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "RightMouseButton",
+                    "type": "Button",
+                    "id": "236beb86-b340-4b0a-95d3-17da7a067b74",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Hold",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MouseDrag",
+                    "type": "Value",
+                    "id": "7bc903da-8ec1-4461-9b03-385fac45dbed",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -45,6 +81,50 @@
                     "processors": "",
                     "groups": "",
                     "action": "DoubleMouseClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5ad14cd7-6a78-49fe-8075-d04f47ec4fae",
+                    "path": "<Mouse>/middleButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MidleMouseButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cc59372f-3506-444f-b80e-11c7736fe49a",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightMouseButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "98b0b9b7-6371-4f06-a672-6df61a8f27de",
+                    "path": "<Mouse>/scroll",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MidleMouseScroll",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "84052c01-c100-4d9d-bc03-b6c2ed71dbaa",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseDrag",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
