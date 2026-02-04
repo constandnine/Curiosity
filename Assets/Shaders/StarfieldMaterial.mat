@@ -54,6 +54,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _StarBlinkingSpeed: 0.002
+    - _StarDensity: 100
     - _StarPower: 100
     - _StarScale: 100
     m_Colors:
