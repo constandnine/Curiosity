@@ -709,8 +709,8 @@ MonoBehaviour:
   dayPerOrbit: 27.3
   DaysPerSecond: 40
   sun: {fileID: 2056505848}
-  staticOrbit: 0
-  visualizer: {fileID: 1895710926}
+  staticOrbit: 1
+  visualizer: {fileID: 2056505855}
 --- !u!4 &290740985
 Transform:
   m_ObjectHideFlags: 0
@@ -2849,7 +2849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb6f7ff43d4766349be637af12442aa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrbitVisualizer
-  segments: 60
+  segments: 20
   orbitSize: 0
   yOffset: 0.15
   center: {fileID: 140949527}
@@ -3014,8 +3014,8 @@ MonoBehaviour:
   dayPerOrbit: 365.25
   DaysPerSecond: 40
   sun: {fileID: 1631839343}
-  staticOrbit: 1
-  visualizer: {fileID: 2056505855}
+  staticOrbit: 0
+  visualizer: {fileID: 1895710926}
 --- !u!120 &2056505854
 LineRenderer:
   serializedVersion: 3
