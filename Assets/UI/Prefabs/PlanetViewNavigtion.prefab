@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 4108899536153398825}
   - component: {fileID: 8360507195359607139}
   m_Layer: 5
-  m_Name: PlanetInfoCanvas
+  m_Name: PlanetViewNavigtion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
