@@ -389,6 +389,8 @@ MonoBehaviour:
   deadZone: 0
   rotationSpeed: 10
   target: {fileID: 1738214038}
+  mainCamera: {fileID: 166069897}
+  zoomSpeed: 1
 --- !u!1 &187013133
 GameObject:
   m_ObjectHideFlags: 0

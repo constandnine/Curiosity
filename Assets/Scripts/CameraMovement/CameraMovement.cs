@@ -15,6 +15,12 @@ public class CameraMovement : MonoBehaviour
 
     private bool rotating;
 
+    [Header("Zooming")]
+
+    [SerializeField] private Camera mainCamera;
+
+    [SerializeField] private float zoomSpeed;
+
     private void Awake()
     {
         inputManager = new InputManager();
@@ -24,20 +30,26 @@ public class CameraMovement : MonoBehaviour
     {
         inputManager.Enable();
 
-        inputManager.Camera.RightMouseButton.performed += ctx => rotating = true;
-        inputManager.Camera.RightMouseButton.canceled += ctx => rotating = false;
+        inputManager.Camera.RightMouseButton.performed += context => rotating = true;
+        inputManager.Camera.RightMouseButton.canceled += context => rotating = false;
     }
 
     private void OnDisable()
     {
-        inputManager.Camera.RightMouseButton.performed -= ctx => rotating = true;
-        inputManager.Camera.RightMouseButton.canceled -= ctx => rotating = false;
+        inputManager.Camera.RightMouseButton.performed -= context => rotating = true;
+        inputManager.Camera.RightMouseButton.canceled -= context => rotating = false;
 
 
         inputManager.Disable();
     }
 
     public void Update()
+    {
+        RotateCamera();
+        CameraZoom();
+    }
+
+    private void RotateCamera()
     {
         if (!rotating) return;
 
@@ -53,11 +65,18 @@ public class CameraMovement : MonoBehaviour
         {
             transform.RotateAround(target.position, Vector3.up, direction * rotationSpeed * Time.deltaTime);
         }
+
     }
 
     public void CameraZoom()
     {
+        Vector2 delta = inputManager.Camera.MidleMouseScroll.ReadValue<Vector2>();
+        float scroll = delta.y;
 
+        if (scroll != 0)
+        {
+            mainCamera.fieldOfView -= scroll * zoomSpeed;
+        }
     }
 
     public void CameraPanning()
