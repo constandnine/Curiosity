@@ -51,11 +51,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _OffsetSeed1: 0
+    - _OffsetSeed2: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _StarBlinkingSpeed: 0.002
     - _StarDensity: 150
-    - _StarPower: 100
+    - _StarPower: 50
     - _StarScale: 100
     m_Colors:
     - _Layer1Offseed: {r: 0, g: 0, b: 0, a: 0}
@@ -63,8 +65,8 @@ Material:
     - _OffsetSeed1: {r: 10, g: 10, b: 0, a: 0}
     - _OffsetSeed2: {r: 20, g: 20, b: 0, a: 0}
     - _StarColor: {r: 31.81618, g: 32, b: 22.15849, a: 1}
-    - _StarDriftSpeed: {r: 0.00015, g: 0.0008, b: 0, a: 0}
-    - _StarDriftSpeed2: {r: 0.00012, g: 0.0007, b: 0, a: 0}
+    - _StarDriftSpeed: {r: 0.00025, g: 0.00012, b: 0, a: 0}
+    - _StarDriftSpeed2: {r: 0.0008, g: -0.0007, b: 0, a: 0}
     - _Vector2: {r: 10, g: 10, b: 0, a: 0}
     - _Vector2_1: {r: 20, g: 20, b: 0, a: 0}
   m_BuildTextureStacks: []
