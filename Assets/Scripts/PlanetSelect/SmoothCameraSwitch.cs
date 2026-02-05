@@ -8,6 +8,8 @@ public class SmoothCameraSwitch : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] Camera mainCamera;
 
+    private Coroutine smoothMoveCoroutine;
+
     private void Awake()
     {
         if (instance == null)
@@ -24,8 +26,13 @@ public class SmoothCameraSwitch : MonoBehaviour
 
     public void SmoothCameraRotation(Transform target)
     {
-        StopCoroutine(SmoothMove(null));
-        StartCoroutine(SmoothMove(target));
+        if (smoothMoveCoroutine != null)
+        {
+            StopCoroutine(smoothMoveCoroutine);
+        }
+
+        smoothMoveCoroutine = null;
+        smoothMoveCoroutine = StartCoroutine(SmoothMove(target));
         Debug.Log($"moving camera to {target}", this);
     }
 

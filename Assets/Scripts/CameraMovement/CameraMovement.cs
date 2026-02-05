@@ -4,6 +4,8 @@ using UnityEngine.UIElements;
 
 public class CameraMovement : MonoBehaviour
 {
+    public static CameraMovement instance;
+
     private InputManager inputManager;
 
     [SerializeField] private Camera mainCamera;
@@ -29,6 +31,17 @@ public class CameraMovement : MonoBehaviour
 
     private void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+
         inputManager = new InputManager();
     }
 
@@ -106,7 +119,7 @@ public class CameraMovement : MonoBehaviour
         if (direction != 0)
         {
             // Rotate around the target horizontally
-            transform.RotateAround(transform.position, Vector3.up, direction * rotationSpeed * Time.deltaTime);
+            transform.RotateAround(transform.position, Vector3.up, direction * panningSpeed * Time.deltaTime);
         }
     }
 }

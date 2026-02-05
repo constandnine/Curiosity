@@ -17,6 +17,7 @@ public class OnClickThreeD : MonoBehaviour
 
     [SerializeField] private float waitForClickTime = 0.3f;
     private bool waitingForSecondClick;
+    private bool oneClick;
 
     private void Awake()
     {
@@ -52,6 +53,9 @@ public class OnClickThreeD : MonoBehaviour
             {
                 Debug.Log($"Hit a planet {hit.transform}", this);
                 thisEvent?.Invoke();
+                if (!oneClick) return;
+                CameraMovement.instance.target = hit.transform;
+                oneClick = false;
             }
         }
     }
@@ -80,6 +84,7 @@ public class OnClickThreeD : MonoBehaviour
         //If second click did happen it set the waiter to false witch means we need to stop running the code.
         // How ever if this didn't happen we execute the ExecuteClick function with the right event.
         if (!waitingForSecondClick) yield break;
+        oneClick = true;
         ExecuteClick(onClick);
         Debug.Log("SingleClick");
 
