@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8265687188891724576}
   - component: {fileID: 8810762469327011816}
   - component: {fileID: 1047680035391364074}
-  - component: {fileID: 3541994278832042996}
+  - component: {fileID: 327323267681770179}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3541994278832042996
+--- !u!114 &327323267681770179
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,17 +87,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 423965559945952637}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Script: {fileID: 11500000, guid: 33977d9591a258e429cbb03e35b877a1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.LayoutElement
-  m_IgnoreLayout: 0
-  m_MinWidth: 0
-  m_MinHeight: 0
-  m_PreferredWidth: 0.7
-  m_PreferredHeight: 1
-  m_FlexibleWidth: 1
-  m_FlexibleHeight: 1
-  m_LayoutPriority: 1
+  m_EditorClassIdentifier: Assembly-CSharp::SetFactData
+  factData: {fileID: 0}
+  planetName: {fileID: 8407459827601104091}
+  factDescription: {fileID: 4474321654535596900}
+  factImage: {fileID: 0}
 --- !u!1 &614816397652798416
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,7 +121,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 614816397652798416}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -6.328}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -134,7 +130,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.275, y: 0.894}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0.7, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6121184367632650533
@@ -182,7 +178,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &8360507195359607139
 MonoBehaviour:
   m_ObjectHideFlags: 0
