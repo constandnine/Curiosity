@@ -58,7 +58,7 @@ public class PlanetOrbitSimulator : MonoBehaviour
         if(transform.position.x > 0 && !check)
         {
             check = true;
-            Debug.Log("Planet time" + Time.time * 2);
+            //Debug.Log("Planet time" + Time.time * 2);
         }
     }
 }

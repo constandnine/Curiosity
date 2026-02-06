@@ -31,7 +31,7 @@ public class PlanetAxisRotation : MonoBehaviour
         {
             checkEnd = false;
             checkStart = false;
-            Debug.Log("AxisRotation: " + Time.time);
+            //Debug.Log("AxisRotation: " + Time.time);
         }
 
         if(planet.localEulerAngles.y >= 15 && checkStart == true)
