@@ -6,8 +6,7 @@ public class PlanetOrbitSimulator : MonoBehaviour
 {
     [SerializeField]
     float dayPerOrbit;
-    [SerializeField]
-    float DaysPerSecond;
+    public float DaysPerSecond;
     [SerializeField]
     GameObject sun;
     [SerializeField]

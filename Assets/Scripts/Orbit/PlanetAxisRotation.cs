@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class PlanetAxisRotation : MonoBehaviour
 {
-    [SerializeField]
-    float rotationsPerMinute;
+    public float rotationsPerMinute;
     [SerializeField]
     float axialTilt;
     [SerializeField]
