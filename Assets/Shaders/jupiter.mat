@@ -56,6 +56,7 @@ Material:
     - _intensity: 8.11
     - _noise_intensinty: 5
     - _noise_intensity: 13.78
+    - _outline_brightness: 66.4
     - _outline_intensity: 5
     - _size: 5
     m_Colors:
