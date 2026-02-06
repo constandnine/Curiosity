@@ -41,7 +41,8 @@ public class SmoothCameraSwitch : MonoBehaviour
         while (Vector3.Distance(transform.position, target.position) > 0.0005f)
         {
             transform.position = Vector3.Lerp(transform.position, target.position, Time.deltaTime * speed);
-            transform.LookAt(target.position);
+            //transform.Rotate(target.position);
+            transform.rotation = Quaternion.Lerp(transform.rotation, target.rotation, Time.deltaTime * speed);
             yield return null;
             Debug.Log("moving", this);
         }
