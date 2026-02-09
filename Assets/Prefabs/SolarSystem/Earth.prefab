@@ -761,10 +761,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb8fb1aa9eddf9545971a209494362f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetOrbitSimulator
-  dayPerOrbit: 2002
+  dayPerOrbit: -1000
   DaysPerSecond: 40
   sun: {fileID: 3861789121768209262}
-  staticOrbit: 0
+  staticOrbit: 1
   visualizer: {fileID: 0}
 --- !u!1001 &4131697992673199679
 PrefabInstance:
