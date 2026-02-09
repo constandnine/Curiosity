@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83971891f8d771e448bd0584d37738b6, type: 3}
-  m_Name: Testfact
+  m_Name: Mars
   m_EditorClassIdentifier: Assembly-CSharp::FactData
-  planetName: TestData
-  factDescription: "\u201CGeloof het of niet, maar we hebben betere kaarten van het
-    oppervlak van  Mars en de Maan dan van onze eigen oceaanbodem. Meer dan 80% van
-    de oceaan is  nog nooit in kaart gebracht, geobserveerd of verkend door mensen."
+  planetName: Mars
+  factDescription: "\u201CMars is de enige planeet die volledig bewoond is door  
+    robots. Op dit moment rijden en vliegen er diverse voertuigen rond, zoals de 
+    Perseverance rover en de restanten van de Ingenuity helikopter."
   factImage: {fileID: 0}
