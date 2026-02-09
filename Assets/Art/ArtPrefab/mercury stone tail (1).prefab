@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5778159627234020264
+--- !u!1001 &6930654471344617450
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,31 +10,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2931b985f3f32de4196d0658a6377ec9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.0125
+      value: -3.399467
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2931b985f3f32de4196d0658a6377ec9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0243
+      value: -0.000000018076271
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2931b985f3f32de4196d0658a6377ec9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.8752
+      value: -5.7455764
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2931b985f3f32de4196d0658a6377ec9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6087617
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2931b985f3f32de4196d0658a6377ec9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2931b985f3f32de4196d0658a6377ec9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7933532
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2931b985f3f32de4196d0658a6377ec9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2931b985f3f32de4196d0658a6377ec9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -42,20 +42,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2931b985f3f32de4196d0658a6377ec9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 105
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2931b985f3f32de4196d0658a6377ec9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: 2931b985f3f32de4196d0658a6377ec9, type: 3}
+    - target: {fileID: 919132149155446097, guid: 2931b985f3f32de4196d0658a6377ec9, type: 3}
+      propertyPath: m_Name
+      value: mercury stone tail (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6829333093618665122, guid: 2931b985f3f32de4196d0658a6377ec9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: e6bf02c317447ef4985b49ec7b8d2730, type: 2}
-    - target: {fileID: 919132149155446097, guid: 2931b985f3f32de4196d0658a6377ec9, type: 3}
-      propertyPath: m_Name
-      value: mercury stone tail
-      objectReference: {fileID: 0}
+    - target: {fileID: 8100320773420232829, guid: 2931b985f3f32de4196d0658a6377ec9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e6bf02c317447ef4985b49ec7b8d2730, type: 2}
+    - target: {fileID: 8730303016566787287, guid: 2931b985f3f32de4196d0658a6377ec9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e6bf02c317447ef4985b49ec7b8d2730, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
