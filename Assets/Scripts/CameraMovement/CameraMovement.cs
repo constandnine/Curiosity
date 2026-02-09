@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
+using static UnityEngine.AdaptivePerformance.Provider.AdaptivePerformanceSubsystemDescriptor;
 
 public class CameraMovement : MonoBehaviour
 {
@@ -102,6 +103,7 @@ public class CameraMovement : MonoBehaviour
         if (scroll != 0)
         {
             mainCamera.fieldOfView -= scroll * zoomSpeed;
+            mainCamera.fieldOfView = Mathf.Clamp(mainCamera.fieldOfView, 45f, 90f);
         }
     }
 
