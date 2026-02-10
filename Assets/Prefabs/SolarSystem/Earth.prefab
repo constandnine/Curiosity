@@ -45,6 +45,96 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ViewNavigation
   CameraPosition: {fileID: 1682195728337462857}
+--- !u!1 &972010308269376096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5033646267690276603}
+  - component: {fileID: 688375200182625227}
+  m_Layer: 0
+  m_Name: planet view moon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5033646267690276603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972010308269376096}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.997276, z: -0.07376037, w: 0}
+  m_LocalPosition: {x: -0.18, y: 0.1, z: 0.50000304}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3662390721898483721}
+  m_LocalEulerAnglesHint: {x: 8.46, y: 180, z: 0}
+--- !u!114 &688375200182625227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972010308269376096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd2280351c621e947b3977b4bf0bb04d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ViewNavigation
+  CameraPosition: {fileID: 5033646267690276603}
+--- !u!1 &1057067944871434900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5120218724538836355}
+  - component: {fileID: 2099547973218564555}
+  m_Layer: 0
+  m_Name: SpotView
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5120218724538836355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057067944871434900}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.3569483, y: 0.62126005, z: 0.558482, w: 0.4179973}
+  m_LocalPosition: {x: -0.46, y: -0.02, z: 0.16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4529499802643620308}
+  m_LocalEulerAnglesHint: {x: -82.9, y: 102.5, z: 10.9}
+--- !u!114 &2099547973218564555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057067944871434900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd2280351c621e947b3977b4bf0bb04d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ViewNavigation
+  CameraPosition: {fileID: 5120218724538836355}
 --- !u!1 &1719140641676018717
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,7 +168,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 6125394067887773717}
   - {fileID: 1682195728337462857}
   - {fileID: 4529499802643620308}
   - {fileID: 3421281117420520230}
@@ -101,6 +190,7 @@ MonoBehaviour:
   sun: {fileID: 0}
   staticOrbit: 0
   visualizer: {fileID: 5063690351174455729}
+  rotationAxis: 0
 --- !u!114 &8136342442168997485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,13 +356,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4006753020126559223}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9709884, z: -0.23912664, w: 0}
-  m_LocalPosition: {x: 0, y: 0.7260132, z: 1.708}
+  m_LocalRotation: {x: 0.054415457, y: 0.92882353, z: -0.15143491, w: 0.33375633}
+  m_LocalPosition: {x: -0.9924, y: 0.2397, z: 0.718}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1590078625353184331}
-  m_LocalEulerAnglesHint: {x: 27.67, y: 180, z: 0}
+  m_Father: {fileID: 4529499802643620308}
+  m_LocalEulerAnglesHint: {x: 18.52, y: 140.47, z: 0}
 --- !u!114 &1441980907573224138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,6 +427,7 @@ MonoBehaviour:
   sun: {fileID: 1719140641676018717}
   staticOrbit: 1
   visualizer: {fileID: 8136342442168997485}
+  rotationAxis: 0
 --- !u!114 &4202918022236171777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,6 +443,200 @@ MonoBehaviour:
   rotationsPerMinute: 90.83977
   axialTilt: 1.53
   planet: {fileID: 3662390721898483721}
+--- !u!1 &5654257613377134055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 323360897192994144}
+  - component: {fileID: 2475905660273051101}
+  m_Layer: 0
+  m_Name: Hot view moon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &323360897192994144
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5654257613377134055}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.3063947, y: 0.61969846, z: 0.58835584, w: 0.41944453}
+  m_LocalPosition: {x: -0.11226, y: 0.00106, z: 0.05156}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3662390721898483721}
+  m_LocalEulerAnglesHint: {x: -80.483, y: 74.497, z: 43.505}
+--- !u!114 &2475905660273051101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5654257613377134055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd2280351c621e947b3977b4bf0bb04d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ViewNavigation
+  CameraPosition: {fileID: 323360897192994144}
+--- !u!1 &7174997274812961974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8536829959929434145}
+  - component: {fileID: 2581976757827591174}
+  - component: {fileID: 6712047989012856584}
+  - component: {fileID: 1086491071044210903}
+  m_Layer: 0
+  m_Name: MoonSurfaceCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8536829959929434145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7174997274812961974}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.10315, y: -0.02081, z: 0.046206653}
+  m_LocalScale: {x: 2.1, y: 2.1, z: 2.1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 3662390721898483721}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &2581976757827591174
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7174997274812961974}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.004
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6712047989012856584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7174997274812961974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff0bbf08ac61d664ea05df570b0a30c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnClickThreeD
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1086491071044210903}
+        m_TargetAssemblyTypeName: PlanetSelect, Assembly-CSharp
+        m_MethodName: PlanetSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2699554205961341554}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  onDoubleClick:
+    m_PersistentCalls:
+      m_Calls: []
+  waitForClickTime: 0.3
+--- !u!114 &1086491071044210903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7174997274812961974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c11eeee27b1ed844859a1db4e177e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlanetSelect
+  OnPlanetSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2475905660273051101}
+        m_TargetAssemblyTypeName: ViewNavigation, Assembly-CSharp
+        m_MethodName: MoveCamera
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7796649415418582102
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,6 +796,155 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 1
   m_ApplyActiveColorSpace: 1
+--- !u!1 &8506129387959315523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7071336351298216690}
+  - component: {fileID: 211782522373972605}
+  - component: {fileID: 1015586482283683269}
+  - component: {fileID: 6520114332587124488}
+  m_Layer: 0
+  m_Name: EarthSurfaceCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7071336351298216690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8506129387959315523}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.3985, y: -0.1541, z: 0.1167}
+  m_LocalScale: {x: 23.05, y: 23.05, z: 23.05}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 4529499802643620308}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &211782522373972605
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8506129387959315523}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.0028
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1015586482283683269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8506129387959315523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff0bbf08ac61d664ea05df570b0a30c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnClickThreeD
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6520114332587124488}
+        m_TargetAssemblyTypeName: PlanetSelect, Assembly-CSharp
+        m_MethodName: PlanetSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 3057069245514323557}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  onDoubleClick:
+    m_PersistentCalls:
+      m_Calls: []
+  waitForClickTime: 0.3
+--- !u!114 &6520114332587124488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8506129387959315523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c11eeee27b1ed844859a1db4e177e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlanetSelect
+  OnPlanetSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2099547973218564555}
+        m_TargetAssemblyTypeName: ViewNavigation, Assembly-CSharp
+        m_MethodName: MoveCamera
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9088114505534013976
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,6 +990,89 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ViewNavigation
   CameraPosition: {fileID: 6024109644161906148}
+--- !u!1001 &2692176952998980803
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4529499802643620308}
+    m_Modifications:
+    - target: {fileID: 323058817621827612, guid: 869f4fcf604532c4c95ac6dac09334a7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 323058817621827612, guid: 869f4fcf604532c4c95ac6dac09334a7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 323058817621827612, guid: 869f4fcf604532c4c95ac6dac09334a7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 323058817621827612, guid: 869f4fcf604532c4c95ac6dac09334a7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.3988
+      objectReference: {fileID: 0}
+    - target: {fileID: 323058817621827612, guid: 869f4fcf604532c4c95ac6dac09334a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1172
+      objectReference: {fileID: 0}
+    - target: {fileID: 323058817621827612, guid: 869f4fcf604532c4c95ac6dac09334a7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1909
+      objectReference: {fileID: 0}
+    - target: {fileID: 323058817621827612, guid: 869f4fcf604532c4c95ac6dac09334a7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6847208
+      objectReference: {fileID: 0}
+    - target: {fileID: 323058817621827612, guid: 869f4fcf604532c4c95ac6dac09334a7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.51194423
+      objectReference: {fileID: 0}
+    - target: {fileID: 323058817621827612, guid: 869f4fcf604532c4c95ac6dac09334a7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.42931178
+      objectReference: {fileID: 0}
+    - target: {fileID: 323058817621827612, guid: 869f4fcf604532c4c95ac6dac09334a7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.29113898
+      objectReference: {fileID: 0}
+    - target: {fileID: 323058817621827612, guid: 869f4fcf604532c4c95ac6dac09334a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 323058817621827612, guid: 869f4fcf604532c4c95ac6dac09334a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -69.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 323058817621827612, guid: 869f4fcf604532c4c95ac6dac09334a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -7.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 323058817621827612, guid: 869f4fcf604532c4c95ac6dac09334a7, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094494439907818150, guid: 869f4fcf604532c4c95ac6dac09334a7, type: 3}
+      propertyPath: m_Name
+      value: Scifiboat
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 869f4fcf604532c4c95ac6dac09334a7, type: 3}
+--- !u!4 &2388936284322614495 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 323058817621827612, guid: 869f4fcf604532c4c95ac6dac09334a7, type: 3}
+  m_PrefabInstance: {fileID: 2692176952998980803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3057069245514323557 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1094494439907818150, guid: 869f4fcf604532c4c95ac6dac09334a7, type: 3}
+  m_PrefabInstance: {fileID: 2692176952998980803}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3844338538804901858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -618,11 +1135,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4adeb2bbe495d4e47bb32f95f3c70ed2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5033646267690276603}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4adeb2bbe495d4e47bb32f95f3c70ed2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 323360897192994144}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4adeb2bbe495d4e47bb32f95f3c70ed2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8536829959929434145}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4adeb2bbe495d4e47bb32f95f3c70ed2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3331940880193720520}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4adeb2bbe495d4e47bb32f95f3c70ed2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7024094803617135004}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4adeb2bbe495d4e47bb32f95f3c70ed2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8214578157178423930}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4adeb2bbe495d4e47bb32f95f3c70ed2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5434023352100268399}
   m_SourcePrefab: {fileID: 100100000, guid: 4adeb2bbe495d4e47bb32f95f3c70ed2, type: 3}
 --- !u!4 &3662390721898483721 stripped
 Transform:
@@ -655,6 +1190,208 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.11375001
   m_Center: {x: -0.000000029802322, y: 0, z: -0.000000018626451}
+--- !u!114 &8214578157178423930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4150274149438343859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff0bbf08ac61d664ea05df570b0a30c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnClickThreeD
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 5434023352100268399}
+        m_TargetAssemblyTypeName: PlanetSelect, Assembly-CSharp
+        m_MethodName: PlanetSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDoubleClick:
+    m_PersistentCalls:
+      m_Calls: []
+  waitForClickTime: 0.3
+--- !u!114 &5434023352100268399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4150274149438343859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c11eeee27b1ed844859a1db4e177e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlanetSelect
+  OnPlanetSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 688375200182625227}
+        m_TargetAssemblyTypeName: ViewNavigation, Assembly-CSharp
+        m_MethodName: MoveCamera
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4202918022236171777}
+        m_TargetAssemblyTypeName: PlanetAxisRotation, Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 785240435156170252}
+        m_TargetAssemblyTypeName: PlanetOrbitSimulator, Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7024094803617135004}
+        m_TargetAssemblyTypeName: UnityEngine.SphereCollider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &3903426501183846943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -761,11 +1498,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb8fb1aa9eddf9545971a209494362f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetOrbitSimulator
-  dayPerOrbit: -1000
+  dayPerOrbit: 0.6
   DaysPerSecond: 40
   sun: {fileID: 3861789121768209262}
   staticOrbit: 1
   visualizer: {fileID: 0}
+  rotationAxis: 0
 --- !u!1001 &4131697992673199679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -843,6 +1581,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 26629ff5947db744da3392980d7e7991, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6024109644161906148}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 26629ff5947db744da3392980d7e7991, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6125394067887773717}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 26629ff5947db744da3392980d7e7991, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7071336351298216690}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 26629ff5947db744da3392980d7e7991, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2388936284322614495}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 26629ff5947db744da3392980d7e7991, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5120218724538836355}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 26629ff5947db744da3392980d7e7991, type: 3}
       insertIndex: -1
@@ -850,6 +1600,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 26629ff5947db744da3392980d7e7991, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4796255404011940002}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 26629ff5947db744da3392980d7e7991, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6549681904411767390}
   m_SourcePrefab: {fileID: 100100000, guid: 26629ff5947db744da3392980d7e7991, type: 3}
 --- !u!1 &3861789121768209262 stripped
 GameObject:
@@ -892,10 +1645,34 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1441980907573224138}
-        m_TargetAssemblyTypeName: ViewNavigation, Assembly-CSharp
-        m_MethodName: MoveCamera
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6549681904411767390}
+        m_TargetAssemblyTypeName: PlanetSelect, Assembly-CSharp
+        m_MethodName: PlanetSelected
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3464043038323142959}
+        m_TargetAssemblyTypeName: UnityEngine.SphereCollider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -906,8 +1683,24 @@ MonoBehaviour:
         m_CallState: 2
   onDoubleClick:
     m_PersistentCalls:
+      m_Calls: []
+  waitForClickTime: 0.3
+--- !u!114 &6549681904411767390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3861789121768209262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c11eeee27b1ed844859a1db4e177e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlanetSelect
+  OnPlanetSelected:
+    m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5159031522002462947}
+      - m_Target: {fileID: 1441980907573224138}
         m_TargetAssemblyTypeName: ViewNavigation, Assembly-CSharp
         m_MethodName: MoveCamera
         m_Mode: 1
@@ -931,9 +1724,199 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  waitForClickTime: 0.3
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 496787165198775334}
+        m_TargetAssemblyTypeName: PlanetOrbitSimulator, Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7864701131780543940}
+        m_TargetAssemblyTypeName: PlanetAxisRotation, Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &4529499802643620308 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 26629ff5947db744da3392980d7e7991, type: 3}
   m_PrefabInstance: {fileID: 4131697992673199679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5029386360733278089
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3662390721898483721}
+    m_Modifications:
+    - target: {fileID: 6970804767669835259, guid: c6c2c68f8c88b0f48a67ce097ed778d8, type: 3}
+      propertyPath: m_Name
+      value: AmerikaanseVlag
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779571073103630145, guid: c6c2c68f8c88b0f48a67ce097ed778d8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779571073103630145, guid: c6c2c68f8c88b0f48a67ce097ed778d8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779571073103630145, guid: c6c2c68f8c88b0f48a67ce097ed778d8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779571073103630145, guid: c6c2c68f8c88b0f48a67ce097ed778d8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.09026
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779571073103630145, guid: c6c2c68f8c88b0f48a67ce097ed778d8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.04045
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779571073103630145, guid: c6c2c68f8c88b0f48a67ce097ed778d8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.05549
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779571073103630145, guid: c6c2c68f8c88b0f48a67ce097ed778d8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6658247
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779571073103630145, guid: c6c2c68f8c88b0f48a67ce097ed778d8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.56312805
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779571073103630145, guid: c6c2c68f8c88b0f48a67ce097ed778d8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.399005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779571073103630145, guid: c6c2c68f8c88b0f48a67ce097ed778d8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.2834772
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779571073103630145, guid: c6c2c68f8c88b0f48a67ce097ed778d8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 77.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779571073103630145, guid: c6c2c68f8c88b0f48a67ce097ed778d8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -77.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779571073103630145, guid: c6c2c68f8c88b0f48a67ce097ed778d8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -19.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779571073103630145, guid: c6c2c68f8c88b0f48a67ce097ed778d8, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6c2c68f8c88b0f48a67ce097ed778d8, type: 3}
+--- !u!1 &2699554205961341554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6970804767669835259, guid: c6c2c68f8c88b0f48a67ce097ed778d8, type: 3}
+  m_PrefabInstance: {fileID: 5029386360733278089}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3331940880193720520 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7779571073103630145, guid: c6c2c68f8c88b0f48a67ce097ed778d8, type: 3}
+  m_PrefabInstance: {fileID: 5029386360733278089}
   m_PrefabAsset: {fileID: 0}
