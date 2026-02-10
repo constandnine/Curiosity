@@ -21,8 +21,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: StarfieldMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: 3273accff997e2343ab877c5daf1a2f0, type: 3}
-  m_Parent: {fileID: 0}
+  m_Shader: {fileID: -6465566751694194690, guid: 0213c7eff7f3b0e4ca472e66502899bf, type: 3}
+  m_Parent: {fileID: -876546973899608171, guid: 0213c7eff7f3b0e4ca472e66502899bf, type: 3}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -36,38 +36,11 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _OffsetSeed1: 0
-    - _OffsetSeed2: 0
     - _QueueControl: 0
-    - _QueueOffset: 0
-    - _StarBlinkingSpeed: 0.002
-    - _StarDensity: 150
     - _StarPower: 50
-    - _StarScale: 100
-    m_Colors:
-    - _Layer1Offseed: {r: 0, g: 0, b: 0, a: 0}
-    - _Layer2Offseed: {r: 0.5, g: 0.7, b: 0, a: 0}
-    - _OffsetSeed1: {r: 10, g: 10, b: 0, a: 0}
-    - _OffsetSeed2: {r: 20, g: 20, b: 0, a: 0}
-    - _StarColor: {r: 31.81618, g: 32, b: 22.15849, a: 1}
-    - _StarDriftSpeed: {r: 0.00025, g: 0.00012, b: 0, a: 0}
-    - _StarDriftSpeed2: {r: 0.0008, g: -0.0007, b: 0, a: 0}
-    - _Vector2: {r: 10, g: 10, b: 0, a: 0}
-    - _Vector2_1: {r: 20, g: 20, b: 0, a: 0}
+    m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
