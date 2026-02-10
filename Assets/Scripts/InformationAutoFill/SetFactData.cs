@@ -35,7 +35,7 @@ public class SetFactData : MonoBehaviour
         }
 
         // Sets the data from factData to a visual TextMeshPro component
-        planetName.text = factData.name;
+        planetName.text = factData.planetName;
         factDescription.text = factData.factDescription;
 
         // Checks if there is a sprite to fill the factImage to be filled, otherwise it will return.
