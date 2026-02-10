@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2063027847396753952
+--- !u!114 &-3760879239440895634
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: jupiter
+  m_Name: saturnes
   m_Shader: {fileID: -6465566751694194690, guid: 871ad0cf6156efc46b9ac42d005bc6a1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -53,13 +53,9 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _intensity: 8.11
-    - _noise_intensinty: 5
-    - _noise_intensity: 10.3
-    - _outline_brightness: 12.4
-    - _outline_intensity: 5
-    - _size: 5
+    - _noise_intensity: 6.3
+    - _outline_brightness: 9.7
     m_Colors:
-    - _outline_color: {r: 2.6796858, g: 0.6228459, b: 0, a: 1}
+    - _outline_color: {r: 0.9547169, g: 0.43537614, b: 0.09186897, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
